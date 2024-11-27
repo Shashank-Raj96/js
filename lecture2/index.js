@@ -2,7 +2,7 @@
 
 
 var x=7;
-function getname(){
+var  getname=()=>{
     var a=10
     console.log("Namaste javascript");
 }
