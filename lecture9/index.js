@@ -3,8 +3,10 @@ function a(temp ){
     
     function b(){
         var b1=13;
-        console .log(b1 , z1, temp);
+        console .log(b1 , z1, temp, a7);
     }
     b();
 }
+var a7=19;
+
 a(10);
