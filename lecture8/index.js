@@ -13,3 +13,13 @@ let b= 100;
    }
 }
    console.log(b);
+   function abc(){
+    console.log(a2);
+    console.log(a3);
+    let a2=10;
+    var a3=19;
+    const a4 = 21;
+
+   }
+   abc();
+   
