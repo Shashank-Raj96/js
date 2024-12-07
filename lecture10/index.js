@@ -1,7 +1,11 @@
 function x(){
-    var i = 1;
+   
+    for(let i = 1; i<= 5; i++)
     setTimeout (function(){
         console.log(i);
- },3000);
+ },i*1000);
+
+ console.log("Namaste JS")
+  
 }
 x();
