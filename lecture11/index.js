@@ -7,12 +7,12 @@ function a(){
 
 
 // function Expression
- var b = function xyz(){
+ var b = function (Param1 , Param2){
      console.log(xyz);
  }
   a();
-  b();
-  xyz();
+  b(1,2);
+
 
 // Anonymous Function
 // function (){
