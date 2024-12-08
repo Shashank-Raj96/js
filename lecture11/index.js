@@ -8,12 +8,11 @@ function a(){
 
 // function Expression
  var b = function (Param1){
-     console.log(Param1);
- }
-  function xyz(){
-
+ return function (){
+   }
   }
-  b(xyz);
+  console.log(b());
+  
 
 // Anonymous Function
 // function (){
