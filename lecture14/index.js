@@ -1,7 +1,11 @@
-function x(){
-    console.log("Namaste");
-}
+const radius = [3,1,2,4];
 
-function y(x){
-    x();
+const calculateArea = function (radius){
+    const output = [];
+    for(let i =0; i<radius.length ; i++){
+        output.push(Math.Pi *radius[i] *radius[i]);
+
+    }
+    return output;
 }
+console.log(calculateArea(radius));
