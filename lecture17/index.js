@@ -6,6 +6,9 @@ promise.then(function(orderId){
     console.log(orderId);
    // proceedToPayment(orderId);
 })
+.catch(function(err){
+    console.log(err.message);
+})
 
 /// producer part of the code
 
