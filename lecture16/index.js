@@ -14,8 +14,31 @@
 
 // to make an API call to github server and we will get the user info
 
-const GITHUB_API = "https://github.com/Shashank-Raj96"
+// const cart = ["shoes", "pants ", "kurtas"];
 
- const user = fetch(GITHUB_API);
+// //api for creating order
+// api.createOrder(cart , function(){
 
- console.log(user);
+// //api for payment   
+//     api.proceedToPayment(function(){
+//         api.showOrderSummary(function(){
+//             api.updateWallet()
+//         })
+
+//     })
+
+// })
+
+// write this above code through promises
+
+createOrder(cart)
+.then(function(orderId){
+ return proccedToPayment(orderId)
+ 
+})
+.then(function(paymentInfo){
+ return showOrderSummary(paymentInfo);
+})
+.then(function(paymentInfo){
+    return updateWalletBalance(paymentInfo);
+  })
