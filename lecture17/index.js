@@ -7,8 +7,15 @@ promise.then(function(orderId){
    // proceedToPayment(orderId);
 })
 .catch(function(err){
-    console.log(err.message);
+    return console.log(err.message);
+ })
+promise.then (function(){
+   return proceedToPayment(orderId);
 })
+promise.then (function(PaymentInfo){
+   return console.log(PaymentInfo)
+})
+
 
 /// producer part of the code
 
@@ -29,6 +36,11 @@ function createOrder(cart){
         }
     });
     return pr;
+}
+function proceedToPayment(orderId){
+    return new Promise(function(resolve , reject){
+        resolve ("Payment Sucessful")
+    })
 }
 
 function validateCart(cart){
