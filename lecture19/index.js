@@ -1,7 +1,9 @@
 
-
+const p = new Promise((resolve, reject)=>{
+    resolve("Promise Resolved Value");
+});
 async function getData(){
-    return "Namaste";
+    return p;
 
 }
 const dataPromise = getData();
