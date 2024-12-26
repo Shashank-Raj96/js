@@ -8,11 +8,17 @@ const p = new Promise((resolve, reject)=>{
 
   async function handlePromise(){
      //JS Engine was waiting for promise to resolve 
-      const val = await p;
+      const val1 = await p;
       console.log ("Namaste JavaScript");
-      console.log(val);
+      console.log(val1);
   }
   handlePromise();
+
+  const val2 = await p;
+  console.log ("Namaste JavaScript 2");
+  console.log(val2);
+}
+handlePromise();
 
 // function getData(){
 //     //JS engine will not wait for promiose to resolve and it will print JS
