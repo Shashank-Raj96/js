@@ -6,10 +6,18 @@ function x(){
 }
 x();
 // this inside a object's method
-const obj = {
-    a:10,
-    x:function(){
-console.log(this.a);
+
+//call apply bind methods ( sharing methods)
+const student = {
+   name : "Shanu" ,
+    printName : function(){
+console.log(this.name);
     }
 }
-obj.x();
+student.printName();
+
+const student2 ={
+    name : "Tanu",
+}
+
+student.printName.call(student2);
