@@ -1,18 +1,24 @@
 //Debouncing in JS
 let counter =0;
-const getData = () => {
-    console.log("fetching Data ..",counter++);
-}
+// const getData = () => {
+//     console.log("fetching Data ..",counter++);
+// }
 
-const doSomeMagic = function (fn,d) {
+async function getData(){
+ let data = await fetch("https://jsonplaceholder.typicode.com/posts")
+ data = await data.json()
+ console.log(data)
+ return data
+}
+const debounce = function (fn,d) {
     let timer;
     return function (){
-        let context = this,
-        args = arguments ;
+      
         clearTimeout(timer);
+        //return hash value
         timer= setTimeout(() =>{
-            getData.apply(context,arguments);
+          console.log( fn())
         },d);
     }
 }
-const betterFunction = dosomething(getData, 300);
+const betterFunction = debounce(getData, 300);
