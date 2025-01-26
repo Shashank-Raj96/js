@@ -21,3 +21,12 @@ const student2 ={
 }
 
 student.printName.call(student2);
+
+//this inside arrow function 
+const obj ={
+    a:10,
+    x : () => {
+        console.log(this);
+    },
+};
+obj.x();
